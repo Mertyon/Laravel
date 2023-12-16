@@ -46,7 +46,7 @@ class HomeControllerTest extends TestCase
         $shiftedTime = strtotime($response->getContent());
 
         // Sprawdzam, czy zwrócony czas jest w granicach tolerancji (np. 5 sekund)
-        $tolerance = 5; // Tolerancja w sekundach
+        $tolerance = 1; // Tolerancja w sekundach
         $this->assertGreaterThanOrEqual($currentTime - $tolerance, $shiftedTime);
         $this->assertLessThanOrEqual($currentTime + $tolerance, $shiftedTime);
     }
